@@ -36,8 +36,8 @@ ul { margin:6px 0 0; padding-left:20px; } li { margin:3px 0; }
 footer { color:var(--ink2); font-size:13px; margin-top:18px; }
 </style></head><body><main>
 <h1>Elemental 3 Parity: Status</h1>
-<p class="sub">As of Nov 18, 2026 05:51 UTC. Started Nov 12, 2026. Work is done by software agents; every result is checked against its evidence before it is recorded.</p>
-<div class="tiles"><div class="tile"><div class="big">Day 7</div><div class="dim">since work started on Nov 12, 2026</div></div><div class="tile"><div class="big">17 of 52</div><div class="dim">plan tasks proven in the lab and in review</div></div><div class="tile"><div class="big">6</div><div class="dim">more tasks in progress</div></div><div class="tile"><div class="big">41</div><div class="dim">task results recorded, each checked against its evidence</div></div></div>
+<p class="sub">As of Nov 18, 2026 06:13 UTC. Started Nov 12, 2026. Work is done by software agents; every result is checked against its evidence before it is recorded.</p>
+<div class="tiles"><div class="tile"><div class="big">Day 7</div><div class="dim">since work started on Nov 12, 2026</div></div><div class="tile"><div class="big">18 of 52</div><div class="dim">plan tasks proven in the lab and in review</div></div><div class="tile"><div class="big">5</div><div class="dim">more tasks in progress</div></div><div class="tile"><div class="big">42</div><div class="dim">task results recorded, each checked against its evidence</div></div></div>
 
 <section><h2>What "parity" means here</h2><p style="margin:4px 0 6px">Parity means a Rancher user can deploy, manage and upgrade an Elemental 3 cluster with an experience equal to or better than each solution it replaces. It is measured, not asserted.</p>
 <ul><li>Baselines: Rancher provisioning v2, Elemental 2, SUSE Edge, and Harvester&#x27;s own lifecycle. Each is measured in the same lab with the same harness.</li><li>Unit of comparison: a user journey, for example &quot;create a cluster&quot; or &quot;upgrade the OS and Kubernetes&quot;. There are 52 approved journeys across deploy, manage, upgrade, tenancy and migration.</li><li>A journey passes when it completes, no node is left cordoned, and it takes no more user steps than the legacy path. Steps are the numbered actions in the official procedure. A tie counts as a pass.</li><li>Time is checked but is not the deciding measure: up to 110% of the legacy time for the same cluster shape passes. The one-time image build for a first cluster is not counted; a prebuilt image path is.</li><li>Elemental 3 must work with or without Rancher. No lifecycle function may depend on Rancher being present.</li><li>Out of scope: K3s, bring-your-own OS, Windows workers, release downgrade, BIOS boot. ARM64 is in scope but not yet measured; every result so far is x86-64.</li><li>Anything better than parity is recorded in a backlog and not built yet, so effort stays on closing gaps.</li></ul></section>
@@ -45,144 +45,144 @@ footer { color:var(--ink2); font-size:13px; margin-top:18px; }
 <section><h2>Milestones: plan against actual</h2>
 <p class="dim" style="margin:0 0 8px">Targets are the estimates made before work began. Later milestones will be re-estimated from the measured pace.</p>
 <div class="scroll"><table><thead><tr><th>Wave</th><th>Goal</th><th>Target</th><th>Status</th><th>Notes</th></tr></thead><tbody>
-<tr><td class="nowrap"><b>W0</b></td><td>Scorecard live; legacy baselines measured; Harvester migration spike started</td><td class="nowrap">Nov 18, 2026</td><td class="nowrap"><span class="ms ms-met" aria-hidden="true">✓</span> Met<br><span class=dim>Nov 13 (5 days ahead of target)</span></td><td class="dim">Scorecard and both legacy baselines measured by day 2.</td></tr><tr><td class="nowrap"><b>W1</b></td><td>Create, scale and upgrade an Elemental 3 cluster on Harvester through the API</td><td class="nowrap">Dec 2, 2026</td><td class="nowrap"><span class="ms ms-lab" aria-hidden="true">◆</span> Shown in the lab<br><span class=dim>Nov 17 (15 days ahead of target)</span></td><td class="dim">Measured end to end by the harness on a 3 + 2 cluster. Lab workarounds for the Harvester provider were used; fixes that remove them were proven on day 7.</td></tr><tr><td class="nowrap"><b>W2</b></td><td>Same flow in the Rancher UI with tenancy</td><td class="nowrap">Dec 23, 2026</td><td class="nowrap"><span class="ms ms-started" aria-hidden="true">▸</span> Under way</td><td class="dim">Create wizard works for a tenant (day 6). Tenant can create, see, scale and delete their cluster with prototype roles (day 7). Upgrade UI and cluster detail are in progress.</td></tr><tr><td class="nowrap"><b>W3</b></td><td>Bare metal: registration, inventory, in-place upgrade</td><td class="nowrap"><span class=dim>to be re-estimated</span></td><td class="nowrap"><span class="ms ms-todo" aria-hidden="true">○</span> Not started</td><td class="dim">Not started.</td></tr><tr><td class="nowrap"><b>W4</b></td><td>AWS, Azure, GCP, vSphere; upgrade by replacement; air-gap; migration</td><td class="nowrap"><span class=dim>to be re-estimated</span></td><td class="nowrap"><span class="ms ms-started" aria-hidden="true">▸</span> Under way</td><td class="dim">Upgrade by replacement shown on Harvester (day 6). Other targets not started.</td></tr><tr><td class="nowrap"><b>W5</b></td><td>Harvester itself on Elemental 3, with in-place migration</td><td class="nowrap"><span class=dim>to be re-estimated</span></td><td class="nowrap"><span class="ms ms-started" aria-hidden="true">▸</span> Under way</td><td class="dim">Three-node rolling migration prototype with live guest and rollback ran on day 2.</td></tr></tbody></table></div></section>
+<tr><td class="nowrap"><b>W0</b></td><td>Scorecard live; legacy baselines measured; Harvester migration spike started</td><td class="nowrap">Nov 18, 2026</td><td class="nowrap"><span class="ms ms-met" aria-hidden="true">✓</span> Met<br><span class=dim>Nov 13 (5 days ahead of target)</span></td><td class="dim">Scorecard and both legacy baselines measured by day 2.</td></tr><tr><td class="nowrap"><b>W1</b></td><td>Create, scale and upgrade an Elemental 3 cluster on Harvester through the API</td><td class="nowrap">Dec 2, 2026</td><td class="nowrap"><span class="ms ms-lab" aria-hidden="true">◆</span> Shown in the lab<br><span class=dim>Nov 17 (15 days ahead of target)</span></td><td class="dim">Measured end to end by the harness on a 3 + 2 cluster. Lab workarounds for the Harvester provider were used; fixes that remove them were proven on day 7.</td></tr><tr><td class="nowrap"><b>W2</b></td><td>Same flow in the Rancher UI with tenancy</td><td class="nowrap">Dec 23, 2026</td><td class="nowrap"><span class="ms ms-started" aria-hidden="true">▸</span> Under way</td><td class="dim">Create wizard works for a tenant (day 6). A tenant created, upgraded, scaled and deleted a cluster entirely in the Rancher UI (day 7), using prototype roles. Cluster detail covers 2 of 12 manage journeys so far.</td></tr><tr><td class="nowrap"><b>W3</b></td><td>Bare metal: registration, inventory, in-place upgrade</td><td class="nowrap"><span class=dim>to be re-estimated</span></td><td class="nowrap"><span class="ms ms-todo" aria-hidden="true">○</span> Not started</td><td class="dim">Not started.</td></tr><tr><td class="nowrap"><b>W4</b></td><td>AWS, Azure, GCP, vSphere; upgrade by replacement; air-gap; migration</td><td class="nowrap"><span class=dim>to be re-estimated</span></td><td class="nowrap"><span class="ms ms-started" aria-hidden="true">▸</span> Under way</td><td class="dim">Upgrade by replacement shown on Harvester (day 6). Other targets not started.</td></tr><tr><td class="nowrap"><b>W5</b></td><td>Harvester itself on Elemental 3, with in-place migration</td><td class="nowrap"><span class=dim>to be re-estimated</span></td><td class="nowrap"><span class="ms ms-started" aria-hidden="true">▸</span> Under way</td><td class="dim">Three-node rolling migration prototype with live guest and rollback ran on day 2.</td></tr></tbody></table></div></section>
 
 <section><h2>Activity by task</h2>
 <p style="margin:0 0 4px"><a href="tasks.html">All 52 plan tasks and their status</a>, including those not started.</p>
 <div class="legend"><span><span class="key" style="background:var(--rev)"></span>Proven in the lab, in review</span>
 <span><span class="key" style="background:var(--prog)"></span>In progress</span>
-<span>Each dot is one verified result committed with its evidence (41 shown; hover for details). 18 of 52 plan tasks have activity.</span></div>
+<span>Each dot is one verified result committed with its evidence (42 shown; hover for details). 18 of 52 plan tasks have activity.</span></div>
 <div class="scroll"><svg viewBox="0 0 1108 634" width="1108" height="634" role="img" aria-label="Activity per task since the project started. Each dot is a verified hand-back.">
 <line class="grid" x1="372.0" y1="28" x2="372.0" y2="614"/>
 <text class="axis" x="376.0" y="13">Nov 12</text>
 <text class="axis dim" x="376.0" y="26">day 1</text>
-<line class="grid" x1="456.5" y1="28" x2="456.5" y2="614"/>
-<text class="axis" x="460.5" y="13">Nov 13</text>
-<text class="axis dim" x="460.5" y="26">day 2</text>
-<line class="grid" x1="541.1" y1="28" x2="541.1" y2="614"/>
-<text class="axis" x="545.1" y="13">Nov 14</text>
-<text class="axis dim" x="545.1" y="26">day 3</text>
-<line class="grid" x1="625.6" y1="28" x2="625.6" y2="614"/>
-<text class="axis" x="629.6" y="13">Nov 15</text>
-<text class="axis dim" x="629.6" y="26">day 4</text>
-<line class="grid" x1="710.1" y1="28" x2="710.1" y2="614"/>
-<text class="axis" x="714.1" y="13">Nov 16</text>
-<text class="axis dim" x="714.1" y="26">day 5</text>
-<line class="grid" x1="794.6" y1="28" x2="794.6" y2="614"/>
-<text class="axis" x="798.6" y="13">Nov 17</text>
-<text class="axis dim" x="798.6" y="26">day 6</text>
-<line class="grid" x1="879.2" y1="28" x2="879.2" y2="614"/>
-<text class="axis" x="883.2" y="13">Nov 18</text>
-<text class="axis dim" x="883.2" y="26">day 7</text>
-<line class="now" x1="899.8" y1="28" x2="899.8" y2="614"/>
-<text class="axis" x="899.8" y="628" text-anchor="middle">now</text>
+<line class="grid" x1="456.0" y1="28" x2="456.0" y2="614"/>
+<text class="axis" x="460.0" y="13">Nov 13</text>
+<text class="axis dim" x="460.0" y="26">day 2</text>
+<line class="grid" x1="540.0" y1="28" x2="540.0" y2="614"/>
+<text class="axis" x="544.0" y="13">Nov 14</text>
+<text class="axis dim" x="544.0" y="26">day 3</text>
+<line class="grid" x1="624.0" y1="28" x2="624.0" y2="614"/>
+<text class="axis" x="628.0" y="13">Nov 15</text>
+<text class="axis dim" x="628.0" y="26">day 4</text>
+<line class="grid" x1="708.0" y1="28" x2="708.0" y2="614"/>
+<text class="axis" x="712.0" y="13">Nov 16</text>
+<text class="axis dim" x="712.0" y="26">day 5</text>
+<line class="grid" x1="792.0" y1="28" x2="792.0" y2="614"/>
+<text class="axis" x="796.0" y="13">Nov 17</text>
+<text class="axis dim" x="796.0" y="26">day 6</text>
+<line class="grid" x1="876.0" y1="28" x2="876.0" y2="614"/>
+<text class="axis" x="880.0" y="13">Nov 18</text>
+<text class="axis dim" x="880.0" y="26">day 7</text>
+<line class="now" x1="897.8" y1="28" x2="897.8" y2="614"/>
+<text class="axis" x="897.8" y="628" text-anchor="middle">now</text>
 <text class="ws" x="0" y="50.0">Baselines and scorecard</text>
 <line class="rule" x1="0" y1="55" x2="1108" y2="55"/>
 <text class="lbl" x="0" y="74.0"><tspan class="tid">T0.1</tspan> Audit of the public repositories</text>
-<circle class="dot rev" cx="431.7" cy="70.0" r="4.5"><title>T0.1 · Nov 12 16:57Z · T0.1: public repo audit; plan corrections and new blockers</title></circle>
+<circle class="dot rev" cx="431.3" cy="70.0" r="4.5"><title>T0.1 · Nov 12 16:57Z · T0.1: public repo audit; plan corrections and new blockers</title></circle>
 <text class="st" x="944" y="74.0">done</text>
 <text class="lbl" x="0" y="98.0"><tspan class="tid">T0.3</tspan> Journey harness and scorecard</text>
-<line class="span rev" x1="433.2" y1="94.0" x2="888.2" y2="94.0"/>
-<circle class="dot rev" cx="433.2" cy="94.0" r="4.5"><title>T0.3 · Nov 12 17:21Z · T0.3: journey harness, scorecard and first provisioning v2 results</title></circle>
-<circle class="dot rev" cx="446.0" cy="94.0" r="4.5"><title>T0.3 · Nov 12 21:00Z · T0.3: first passing provisioning v2 create run on 1x1; scale and upgrade not yet passing</title></circle>
-<circle class="dot rev" cx="457.7" cy="94.0" r="4.5"><title>T0.3 · Nov 13 00:20Z · T0.3: legacy baseline measured for 1x1 (all three journeys) and 3x2 create</title></circle>
-<circle class="dot rev" cx="468.4" cy="94.0" r="4.5"><title>T0.3 · Nov 13 03:22Z · T0.3: 3x2 legacy baseline measured; scorecard and task board updated</title></circle>
-<circle class="dot rev" cx="875.9" cy="94.0" r="4.5"><title>T0.3 · Nov 17 23:03Z · T0.3: Elemental 3 harness driver; scale and upgrade measured on 3 + 2</title></circle>
-<circle class="dot rev" cx="888.2" cy="94.0" r="4.5"><title>T0.3 · Nov 18 02:34Z · T0.3: two clean Elemental 3 create samples on 3 + 2 (27m03s, 27m13s; legacy 25m30s)</title></circle>
+<line class="span rev" x1="432.8" y1="94.0" x2="885.0" y2="94.0"/>
+<circle class="dot rev" cx="432.8" cy="94.0" r="4.5"><title>T0.3 · Nov 12 17:21Z · T0.3: journey harness, scorecard and first provisioning v2 results</title></circle>
+<circle class="dot rev" cx="445.5" cy="94.0" r="4.5"><title>T0.3 · Nov 12 21:00Z · T0.3: first passing provisioning v2 create run on 1x1; scale and upgrade not yet passing</title></circle>
+<circle class="dot rev" cx="457.2" cy="94.0" r="4.5"><title>T0.3 · Nov 13 00:20Z · T0.3: legacy baseline measured for 1x1 (all three journeys) and 3x2 create</title></circle>
+<circle class="dot rev" cx="467.8" cy="94.0" r="4.5"><title>T0.3 · Nov 13 03:22Z · T0.3: 3x2 legacy baseline measured; scorecard and task board updated</title></circle>
+<circle class="dot rev" cx="872.7" cy="94.0" r="4.5"><title>T0.3 · Nov 17 23:03Z · T0.3: Elemental 3 harness driver; scale and upgrade measured on 3 + 2</title></circle>
+<circle class="dot rev" cx="885.0" cy="94.0" r="4.5"><title>T0.3 · Nov 18 02:34Z · T0.3: two clean Elemental 3 create samples on 3 + 2 (27m03s, 27m13s; legacy 25m30s)</title></circle>
 <text class="st" x="944" y="98.0">proven in lab, in review</text>
 <text class="lbl" x="0" y="122.0"><tspan class="tid">T0.4</tspan> Elemental 2 baseline</text>
-<line class="span prog" x1="489.5" y1="118.0" x2="899.8" y2="118.0"/>
-<circle class="dot prog" cx="489.5" cy="118.0" r="4.5"><title>T0.4 · Nov 13 09:20Z · T0.4: Elemental 2 baseline at 1x1; elemental2 harness driver; scorecard</title></circle>
-<circle class="dot prog" cx="489.6" cy="118.0" r="4.5"><title>T0.4 · Nov 13 09:22Z · T0.4: 3x2 Elemental 2 run deferred on capacity; diagnostics added to the driver</title></circle>
-<circle class="dot prog" cx="512.8" cy="118.0" r="4.5"><title>T0.4 · Nov 13 15:58Z · T0.4: 3x2 Elemental 2 run stopped by lab storage limit; storage budget rule</title></circle>
-<circle class="dot prog" cx="529.4" cy="118.0" r="4.5"><title>T0.4 · Nov 13 20:40Z · T0.4: Elemental 2 at 3x2; fix upgrade completion check in both drivers</title></circle>
-<circle class="dot prog" cx="540.0" cy="118.0" r="4.5"><title>T0.4 · Nov 13 23:42Z · T0.4: Elemental 2 at 3x2 final; OS upgrade fails on the 900 s job deadline</title></circle>
-<circle class="dot prog" cx="556.2" cy="118.0" r="4.5"><title>T0.4 · Nov 14 04:18Z · T0.4: Elemental 2 OS upgrade with 4 vCPU / 16 GiB control planes</title></circle>
-<path class="open prog" d="M894.8,113.0 L899.8,118.0 L894.8,123.0"/>
+<line class="span prog" x1="488.7" y1="118.0" x2="897.8" y2="118.0"/>
+<circle class="dot prog" cx="488.7" cy="118.0" r="4.5"><title>T0.4 · Nov 13 09:20Z · T0.4: Elemental 2 baseline at 1x1; elemental2 harness driver; scorecard</title></circle>
+<circle class="dot prog" cx="488.8" cy="118.0" r="4.5"><title>T0.4 · Nov 13 09:22Z · T0.4: 3x2 Elemental 2 run deferred on capacity; diagnostics added to the driver</title></circle>
+<circle class="dot prog" cx="511.9" cy="118.0" r="4.5"><title>T0.4 · Nov 13 15:58Z · T0.4: 3x2 Elemental 2 run stopped by lab storage limit; storage budget rule</title></circle>
+<circle class="dot prog" cx="528.4" cy="118.0" r="4.5"><title>T0.4 · Nov 13 20:40Z · T0.4: Elemental 2 at 3x2; fix upgrade completion check in both drivers</title></circle>
+<circle class="dot prog" cx="539.0" cy="118.0" r="4.5"><title>T0.4 · Nov 13 23:42Z · T0.4: Elemental 2 at 3x2 final; OS upgrade fails on the 900 s job deadline</title></circle>
+<circle class="dot prog" cx="555.1" cy="118.0" r="4.5"><title>T0.4 · Nov 14 04:18Z · T0.4: Elemental 2 OS upgrade with 4 vCPU / 16 GiB control planes</title></circle>
+<path class="open prog" d="M892.8,113.0 L897.8,118.0 L892.8,123.0"/>
 <text class="st" x="944" y="122.0">in progress</text>
 <text class="ws" x="0" y="146.0">Images</text>
 <line class="rule" x1="0" y1="151" x2="1108" y2="151"/>
 <text class="lbl" x="0" y="170.0"><tspan class="tid">T1.1</tspan> Elemental 3 image boots on Harvester</text>
-<circle class="dot rev" cx="445.6" cy="166.0" r="4.5"><title>T1.1 · Nov 12 20:54Z · T1.1 spike: Elemental 3 main boots on Harvester with boot-time config</title></circle>
+<circle class="dot rev" cx="445.2" cy="166.0" r="4.5"><title>T1.1 · Nov 12 20:54Z · T1.1 spike: Elemental 3 main boots on Harvester with boot-time config</title></circle>
 <text class="st" x="944" y="170.0">proven in lab, in review</text>
 <text class="lbl" x="0" y="194.0"><tspan class="tid">T1.3</tspan> Prebuilt image path (no build for a first cluster)</text>
-<circle class="dot rev" cx="788.3" cy="190.0" r="4.5"><title>T1.3 · Nov 16 22:11Z · T1.3: prebuilt image pipeline; first cluster on Harvester with no build (lab)</title></circle>
+<circle class="dot rev" cx="785.7" cy="190.0" r="4.5"><title>T1.3 · Nov 16 22:11Z · T1.3: prebuilt image pipeline; first cluster on Harvester with no build (lab)</title></circle>
 <text class="st" x="944" y="194.0">proven in lab, in review</text>
 <text class="lbl" x="0" y="218.0"><tspan class="tid">T1.4</tspan> One generic image for all node roles</text>
-<circle class="dot rev" cx="792.0" cy="214.0" r="4.5"><title>T1.4 · Nov 16 23:15Z · T1.4: generic CAPI-ready image; one image serves 3 control plane + 2 workers (lab)</title></circle>
+<circle class="dot rev" cx="789.4" cy="214.0" r="4.5"><title>T1.4 · Nov 16 23:15Z · T1.4: generic CAPI-ready image; one image serves 3 control plane + 2 workers (lab)</title></circle>
 <text class="st" x="944" y="218.0">proven in lab, in review</text>
 <text class="lbl" x="0" y="242.0"><tspan class="tid">T1.5</tspan> Image build operator</text>
-<circle class="dot rev" cx="808.9" cy="238.0" r="4.5"><title>T1.5 · Nov 17 04:03Z · T1.5: image build operator; request to usable Harvester image with no manual step (lab)</title></circle>
+<circle class="dot rev" cx="806.2" cy="238.0" r="4.5"><title>T1.5 · Nov 17 04:03Z · T1.5: image build operator; request to usable Harvester image with no manual step (lab)</title></circle>
 <text class="st" x="944" y="242.0">proven in lab, in review</text>
 <text class="lbl" x="0" y="266.0"><tspan class="tid">T1.6</tspan> Image build without a privileged container</text>
-<line class="span rev" x1="815.9" y1="262.0" x2="859.1" y2="262.0"/>
-<circle class="dot rev" cx="815.9" cy="262.0" r="4.5"><title>T1.6 · Nov 17 06:01Z · T1.6: image build needs no privileged container; pod builder beside the VM builder (lab)</title></circle>
-<circle class="dot rev" cx="859.1" cy="262.0" r="4.5"><title>T1.6 · Nov 17 18:17Z · T1.6: pod builder proof on the Rancher management cluster</title></circle>
+<line class="span rev" x1="813.1" y1="262.0" x2="856.0" y2="262.0"/>
+<circle class="dot rev" cx="813.1" cy="262.0" r="4.5"><title>T1.6 · Nov 17 06:01Z · T1.6: image build needs no privileged container; pod builder beside the VM builder (lab)</title></circle>
+<circle class="dot rev" cx="856.0" cy="262.0" r="4.5"><title>T1.6 · Nov 17 18:17Z · T1.6: pod builder proof on the Rancher management cluster</title></circle>
 <text class="st" x="944" y="266.0">proven in lab, in review</text>
 <text class="ws" x="0" y="290.0">Cluster provisioning</text>
 <line class="rule" x1="0" y1="295" x2="1108" y2="295"/>
 <text class="lbl" x="0" y="314.0"><tspan class="tid">T2.2</tspan> Cluster on Harvester, with and without Rancher</text>
-<line class="span rev" x1="456.9" y1="310.0" x2="891.8" y2="310.0"/>
-<circle class="dot rev" cx="456.9" cy="310.0" r="4.5"><title>T2.2 · Nov 13 00:05Z · T2.2: Cluster API cluster of Elemental 3 nodes on Harvester, imported into Rancher (works with shims)</title></circle>
-<circle class="dot rev" cx="882.4" cy="310.0" r="4.5"><title>T2.2 · Nov 18 00:54Z · T2.2: full lifecycle from a management cluster with no Rancher (Cluster API alone)</title></circle>
-<circle class="dot rev" cx="891.8" cy="310.0" r="4.5"><title>T2.2 · Nov 18 03:34Z · T2.2: Rancher-free create with a direct Harvester credential (17m46s, zero packets to Rancher)</title></circle>
+<line class="span rev" x1="456.3" y1="310.0" x2="888.5" y2="310.0"/>
+<circle class="dot rev" cx="456.3" cy="310.0" r="4.5"><title>T2.2 · Nov 13 00:05Z · T2.2: Cluster API cluster of Elemental 3 nodes on Harvester, imported into Rancher (works with shims)</title></circle>
+<circle class="dot rev" cx="879.2" cy="310.0" r="4.5"><title>T2.2 · Nov 18 00:54Z · T2.2: full lifecycle from a management cluster with no Rancher (Cluster API alone)</title></circle>
+<circle class="dot rev" cx="888.5" cy="310.0" r="4.5"><title>T2.2 · Nov 18 03:34Z · T2.2: Rancher-free create with a direct Harvester credential (17m46s, zero packets to Rancher)</title></circle>
 <text class="st" x="944" y="314.0">proven in lab, in review</text>
 <text class="lbl" x="0" y="338.0"><tspan class="tid">T2.6</tspan> Boot-time configuration (cloud-init)</text>
-<circle class="dot rev" cx="447.1" cy="334.0" r="4.5"><title>T2.6 · Nov 12 21:19Z · T2.6: cloud-init via yip design, prototype branch reference and lab proof</title></circle>
+<circle class="dot rev" cx="446.7" cy="334.0" r="4.5"><title>T2.6 · Nov 12 21:19Z · T2.6: cloud-init via yip design, prototype branch reference and lab proof</title></circle>
 <text class="st" x="944" y="338.0">proven in lab, in review</text>
 <text class="ws" x="0" y="362.0">Upgrade</text>
 <line class="rule" x1="0" y1="367" x2="1108" y2="367"/>
 <text class="lbl" x="0" y="386.0"><tspan class="tid">T3.2</tspan> Upgrade driven from Rancher</text>
-<line class="span prog" x1="462.3" y1="382.0" x2="899.8" y2="382.0"/>
-<circle class="dot prog" cx="462.3" cy="382.0" r="4.5"><title>T3.2 · Nov 13 01:38Z · T3.2: in-place LCM run on the imported cluster, triggered from the Rancher side</title></circle>
-<circle class="dot prog" cx="515.4" cy="382.0" r="4.5"><title>T3.2 · Nov 13 16:43Z · T3.2 round 2: real version upgrade and power-cut injection; gaps G1-G13</title></circle>
-<path class="open prog" d="M894.8,377.0 L899.8,382.0 L894.8,387.0"/>
+<line class="span prog" x1="461.8" y1="382.0" x2="897.8" y2="382.0"/>
+<circle class="dot prog" cx="461.8" cy="382.0" r="4.5"><title>T3.2 · Nov 13 01:38Z · T3.2: in-place LCM run on the imported cluster, triggered from the Rancher side</title></circle>
+<circle class="dot prog" cx="514.5" cy="382.0" r="4.5"><title>T3.2 · Nov 13 16:43Z · T3.2 round 2: real version upgrade and power-cut injection; gaps G1-G13</title></circle>
+<path class="open prog" d="M892.8,377.0 L897.8,382.0 L892.8,387.0"/>
 <text class="st" x="944" y="386.0">in progress</text>
 <text class="lbl" x="0" y="410.0"><tspan class="tid">T3.3</tspan> Lifecycle manager hardening</text>
-<line class="span prog" x1="472.5" y1="406.0" x2="899.8" y2="406.0"/>
-<circle class="dot prog" cx="472.5" cy="406.0" r="4.5"><title>T3.3 · Nov 13 04:31Z · T3.3: three lifecycle manager upgrade-time fixes on the fork; report</title></circle>
-<circle class="dot prog" cx="510.3" cy="406.0" r="4.5"><title>T3.3 · Nov 13 15:16Z · T3.3: release marker commits on both forks; report updated</title></circle>
-<circle class="dot prog" cx="517.1" cy="406.0" r="4.5"><title>T3.3 · Nov 13 17:12Z · T3.3: deadline, failure reporting, retry and interrupted-upgrade fixes on the forks</title></circle>
-<circle class="dot prog" cx="518.2" cy="406.0" r="4.5"><title>T3.3 · Nov 13 17:31Z · T3.3: fix series rebased on upstream main as -v2; lab build recipe</title></circle>
-<circle class="dot prog" cx="546.7" cy="406.0" r="4.5"><title>T3.3 · Nov 14 01:36Z · T3.3: fix series validated on a 3+2 cluster; 10 of 11 commits confirmed</title></circle>
-<circle class="dot prog" cx="564.9" cy="406.0" r="4.5"><title>T3.3 · Nov 14 06:46Z · T3.3: clean hands-off upgrade on 3+2 takes 2h14m; chart downgrade stalls the worker phase</title></circle>
-<circle class="dot prog" cx="610.6" cy="406.0" r="4.5"><title>T3.3 · Nov 14 19:44Z · T3.3: G5 fixed in the lifecycle manager; hands-off 3+2 upgrade in 72m55s</title></circle>
-<circle class="dot prog" cx="808.6" cy="406.0" r="4.5"><title>T3.3 · Nov 17 03:57Z · T3.3: upgrade on a cluster Rancher does not manage (runs G and H)</title></circle>
-<path class="open prog" d="M894.8,401.0 L899.8,406.0 L894.8,411.0"/>
+<line class="span prog" x1="471.9" y1="406.0" x2="897.8" y2="406.0"/>
+<circle class="dot prog" cx="471.9" cy="406.0" r="4.5"><title>T3.3 · Nov 13 04:31Z · T3.3: three lifecycle manager upgrade-time fixes on the fork; report</title></circle>
+<circle class="dot prog" cx="509.5" cy="406.0" r="4.5"><title>T3.3 · Nov 13 15:16Z · T3.3: release marker commits on both forks; report updated</title></circle>
+<circle class="dot prog" cx="516.2" cy="406.0" r="4.5"><title>T3.3 · Nov 13 17:12Z · T3.3: deadline, failure reporting, retry and interrupted-upgrade fixes on the forks</title></circle>
+<circle class="dot prog" cx="517.3" cy="406.0" r="4.5"><title>T3.3 · Nov 13 17:31Z · T3.3: fix series rebased on upstream main as -v2; lab build recipe</title></circle>
+<circle class="dot prog" cx="545.6" cy="406.0" r="4.5"><title>T3.3 · Nov 14 01:36Z · T3.3: fix series validated on a 3+2 cluster; 10 of 11 commits confirmed</title></circle>
+<circle class="dot prog" cx="563.7" cy="406.0" r="4.5"><title>T3.3 · Nov 14 06:46Z · T3.3: clean hands-off upgrade on 3+2 takes 2h14m; chart downgrade stalls the worker phase</title></circle>
+<circle class="dot prog" cx="609.1" cy="406.0" r="4.5"><title>T3.3 · Nov 14 19:44Z · T3.3: G5 fixed in the lifecycle manager; hands-off 3+2 upgrade in 72m55s</title></circle>
+<circle class="dot prog" cx="805.8" cy="406.0" r="4.5"><title>T3.3 · Nov 17 03:57Z · T3.3: upgrade on a cluster Rancher does not manage (runs G and H)</title></circle>
+<path class="open prog" d="M892.8,401.0 L897.8,406.0 L892.8,411.0"/>
 <text class="st" x="944" y="410.0">in progress</text>
 <text class="lbl" x="0" y="434.0"><tspan class="tid">T3.4</tspan> Upgrade by node replacement</text>
-<circle class="dot rev" cx="876.0" cy="430.0" r="4.5"><title>T3.4 · Nov 17 23:05Z · T3.4: upgrade by replacement on 3 + 2 (54m39s); zero-downtime not met (API gaps up to 27 s)</title></circle>
+<circle class="dot rev" cx="872.8" cy="430.0" r="4.5"><title>T3.4 · Nov 17 23:05Z · T3.4: upgrade by replacement on 3 + 2 (54m39s); zero-downtime not met (API gaps up to 27 s)</title></circle>
 <text class="st" x="944" y="434.0">proven in lab, in review</text>
 <text class="ws" x="0" y="458.0">Rancher UI</text>
 <line class="rule" x1="0" y1="463" x2="1108" y2="463"/>
 <text class="lbl" x="0" y="482.0"><tspan class="tid">T4.1</tspan> Create-cluster wizard in Rancher</text>
-<circle class="dot rev" cx="880.3" cy="478.0" r="4.5"><title>T4.1 · Nov 18 00:19Z · T4.1: Elemental 3 create-cluster wizard in Rancher; tenant created a real 1 + 1 (12 interactions vs 18 legacy)</title></circle>
+<circle class="dot rev" cx="877.1" cy="478.0" r="4.5"><title>T4.1 · Nov 18 00:19Z · T4.1: Elemental 3 create-cluster wizard in Rancher; tenant created a real 1 + 1 (12 interactions vs 18 legacy)</title></circle>
 <text class="st" x="944" y="482.0">proven in lab, in review</text>
-<text class="lbl" x="0" y="506.0"><tspan class="tid">T4.2</tspan> Upgrade UI</text>
-<path class="open prog" d="M894.8,497.0 L899.8,502.0 L894.8,507.0"/>
-<text class="st" x="944" y="506.0">in progress</text>
+<text class="lbl" x="0" y="506.0"><tspan class="tid">T4.2</tspan> Upgrade UI (release picker, progress)</text>
+<circle class="dot rev" cx="897.8" cy="502.0" r="4.5"><title>T4.2 · Nov 18 06:13Z · T4.2: upgrade UI and cluster detail; tenant ran create, upgrade, scale, delete in the Rancher UI</title></circle>
+<text class="st" x="944" y="506.0">proven in lab, in review</text>
 <text class="lbl" x="0" y="530.0"><tspan class="tid">T4.4</tspan> Cluster detail and scaling UI</text>
-<path class="open prog" d="M894.8,521.0 L899.8,526.0 L894.8,531.0"/>
+<path class="open prog" d="M892.8,521.0 L897.8,526.0 L892.8,531.0"/>
 <text class="st" x="944" y="530.0">in progress</text>
 <text class="ws" x="0" y="554.0">Harvester</text>
 <line class="rule" x1="0" y1="559" x2="1108" y2="559"/>
 <text class="lbl" x="0" y="578.0"><tspan class="tid">T6.4</tspan> Harvester in-place migration (design and prototype)</text>
-<line class="span rev" x1="430.7" y1="574.0" x2="487.3" y2="574.0"/>
-<circle class="dot rev" cx="430.7" cy="574.0" r="4.5"><title>T6.4 · Nov 12 16:39Z · T6.4: Harvester in-place migration design spike (first pass)</title></circle>
-<circle class="dot rev" cx="460.0" cy="574.0" r="4.5"><title>T6.4 · Nov 13 00:58Z · T6.4: in-place migration prototype results (partial)</title></circle>
-<circle class="dot rev" cx="468.4" cy="574.0" r="4.5"><title>T6.4 · Nov 13 03:22Z · T6.4 round 2: clean unattended single-node migration run; 3x2 legacy baseline results</title></circle>
-<circle class="dot rev" cx="487.3" cy="574.0" r="4.5"><title>T6.4 · Nov 13 08:44Z · T6.4 round 3: rolling three-node Harvester migration with live guest, rollback and Secure Boot</title></circle>
+<line class="span rev" x1="430.3" y1="574.0" x2="486.6" y2="574.0"/>
+<circle class="dot rev" cx="430.3" cy="574.0" r="4.5"><title>T6.4 · Nov 12 16:39Z · T6.4: Harvester in-place migration design spike (first pass)</title></circle>
+<circle class="dot rev" cx="459.4" cy="574.0" r="4.5"><title>T6.4 · Nov 13 00:58Z · T6.4: in-place migration prototype results (partial)</title></circle>
+<circle class="dot rev" cx="467.8" cy="574.0" r="4.5"><title>T6.4 · Nov 13 03:22Z · T6.4 round 2: clean unattended single-node migration run; 3x2 legacy baseline results</title></circle>
+<circle class="dot rev" cx="486.6" cy="574.0" r="4.5"><title>T6.4 · Nov 13 08:44Z · T6.4 round 3: rolling three-node Harvester migration with live guest, rollback and Secure Boot</title></circle>
 <text class="st" x="944" y="578.0">proven in lab, in review</text>
 <text class="lbl" x="0" y="602.0"><tspan class="tid">T6.5</tspan> Harvester host image on Elemental 3</text>
-<line class="span prog" x1="510.4" y1="598.0" x2="899.8" y2="598.0"/>
-<circle class="dot prog" cx="510.4" cy="598.0" r="4.5"><title>T6.5 · Nov 13 15:16Z · T6.5 first slice: Harvester host extension image; migration proof without borrowed tools</title></circle>
-<circle class="dot prog" cx="522.9" cy="598.0" r="4.5"><title>T6.5 · Nov 13 18:51Z · T6.5: three-node rolling migration onto the host image with enforcing trial boots</title></circle>
-<path class="open prog" d="M894.8,593.0 L899.8,598.0 L894.8,603.0"/>
+<line class="span prog" x1="509.5" y1="598.0" x2="897.8" y2="598.0"/>
+<circle class="dot prog" cx="509.5" cy="598.0" r="4.5"><title>T6.5 · Nov 13 15:16Z · T6.5 first slice: Harvester host extension image; migration proof without borrowed tools</title></circle>
+<circle class="dot prog" cx="522.0" cy="598.0" r="4.5"><title>T6.5 · Nov 13 18:51Z · T6.5: three-node rolling migration onto the host image with enforcing trial boots</title></circle>
+<path class="open prog" d="M892.8,593.0 L897.8,598.0 L892.8,603.0"/>
 <text class="st" x="944" y="602.0">in progress</text>
 </svg></div></section>
 
 <section class="res"><h2>Measured so far</h2><p class="dim" style="margin:0 0 8px">Same cluster shape (3 control plane + 2 workers, 2 vCPU), same harness, x86-64, lab conditions. Mostly single samples.</p>
-<div class="scroll"><table><thead><tr><th>Journey</th><th>Rancher provisioning v2</th><th>Elemental 2</th><th>Elemental 3</th></tr></thead><tbody><tr><td>Create a cluster: user steps</td><td>18</td><td>8</td><td>6</td></tr><tr><td>Create a cluster: time</td><td>25 min 30 s</td><td>42 min 15 s</td><td>27 min 03 s</td></tr><tr><td>Create in the Rancher UI: interactions</td><td>18</td><td>not measured</td><td>12</td></tr><tr><td>Upgrade Kubernetes only</td><td>24 min 29 s</td><td>36 min 45 s</td><td>part of the combined upgrade</td></tr><tr><td>Upgrade OS and Kubernetes as one action</td><td>not offered</td><td>fails (node left cordoned)</td><td>90 min in place; 55 min by replacement</td></tr><tr><td>Works with no Rancher at all</td><td>no</td><td>no</td><td>yes: create, scale, upgrade, delete</td></tr></tbody></table></div></section>
+<div class="scroll"><table><thead><tr><th>Journey</th><th>Rancher provisioning v2</th><th>Elemental 2</th><th>Elemental 3</th></tr></thead><tbody><tr><td>Create a cluster: user steps</td><td>18</td><td>8</td><td>6</td></tr><tr><td>Create a cluster: time</td><td>25 min 30 s</td><td>42 min 15 s</td><td>27 min 03 s</td></tr><tr><td>Create in the Rancher UI: interactions</td><td>18</td><td>not measured</td><td>11</td></tr><tr><td>Upgrade in the Rancher UI: steps</td><td>4 (Kubernetes only)</td><td>not measured</td><td>4 (OS, Kubernetes and applications)</td></tr><tr><td>Upgrade Kubernetes only</td><td>24 min 29 s</td><td>36 min 45 s</td><td>part of the combined upgrade</td></tr><tr><td>Upgrade OS and Kubernetes as one action</td><td>not offered</td><td>fails (node left cordoned)</td><td>90 min in place; 55 min by replacement</td></tr><tr><td>Works with no Rancher at all</td><td>no</td><td>no</td><td>yes: create, scale, upgrade, delete</td></tr></tbody></table></div></section>
 
 <section><h2>Known gaps</h2><ul><li>Cluster creation needed four lab workarounds for the Harvester Cluster API provider. Fixes for all four are proven in the lab (day 7): none is needed with a direct Harvester credential, one remains for a tenant going through Rancher. No released provider version contains the fixes yet.</li><li>With default Rancher roles a tenant cannot create or see an Elemental 3 cluster. A fix is proven in the lab (day 7) and needs a small change in Rancher Turtles to ship.</li><li>The in-place upgrade takes 90 minutes; the legacy Kubernetes-only upgrade takes 24.</li><li>Only Harvester virtual machines are covered so far. Bare metal, vSphere and the public clouds are not started.</li><li>Everything is proven in a lab on fork branches. No upstream pull request has been opened yet, by decision.</li></ul></section>
 
